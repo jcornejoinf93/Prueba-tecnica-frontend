@@ -1,0 +1,25 @@
+<table *ngIf="users.length > 0" class="table table-striped table-hover">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Username</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center" *ngFor="let u of users">
+            <td>{{ u.name }}</td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.age }}</td>
+            <td>
+                <i class="fas fa-user-edit text-primary" (click)="transmitData(u)"></i>
+                <i class="fas fa-trash text-danger" (click)="removeUsers(u)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h3 *ngIf="users.length === 0">NO SE ENCONTARON DATOS PARA MOSTRAR</h3>
+<br><br>
+<hr>
+<app-users-form [userForEdit]="userForEdit" (fillTable)="receibeData($event)"></app-users-form>
