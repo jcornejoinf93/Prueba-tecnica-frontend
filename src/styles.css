@@ -12,9 +12,7 @@ h1 {
 }
 
 .welcome-text {
-    position: absolute;
     width: 600px;
-    height: 300px;
     margin: 20% 30%;
     text-align: center;
 }
