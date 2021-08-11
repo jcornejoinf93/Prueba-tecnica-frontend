@@ -6,3 +6,19 @@ body {
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+h1 {
+    color: #bdc3c7;
+}
+
+.welcome-text {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+}
+
+.welcome-text h2 {
+    color: white;
+}

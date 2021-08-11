@@ -1,5 +1,9 @@
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let m of menuItems" [routerLink]="m.url" routerLinkActive="active">
-        {{ m.name }}
-    </li>
-</ul>
+<div class="sidebar">
+    <header>Mantenedor usuarios</header>
+    <ul>
+        <li *ngFor="let m of menuItems" [routerLink]="m.url" routerLinkActive="activado">
+            <i class="fas fa-arrow-alt-circle-right"></i> {{ m.name }}
+        </li>
+    </ul>
+
+</div>
