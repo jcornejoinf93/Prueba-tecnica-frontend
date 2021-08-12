@@ -36,6 +36,7 @@ export class UsersTableComponent implements OnInit {
       text: 'Se eliminará el usuario de nuestra base de datos',
       icon: 'warning',
       showCancelButton: true,
+      cancelButtonText: 'NO',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'SÍ'
