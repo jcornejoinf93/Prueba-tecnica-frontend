@@ -11,6 +11,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 // Toastr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     UsersModule,
+    HomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()

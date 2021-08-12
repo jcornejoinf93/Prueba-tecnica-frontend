@@ -13,7 +13,7 @@ interface MenuModels {
 export class SidebarComponent implements OnInit {
 
   menuItems: MenuModels[] = [
-    { name: 'Home', url: '/users/home' },
+    { name: 'Home', url: '/home' },
     { name: 'Usuarios', url: '/users/listar-usuarios' }
   ];
 
