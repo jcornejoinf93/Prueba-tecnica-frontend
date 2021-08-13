@@ -15,17 +15,25 @@ export class UsersTableComponent implements OnInit {
 
   userForEdit: UsersModels;
   users: UsersModels[] = [];
+  isLoading: boolean = true;
 
   constructor( private userService: UsersService,
                private toastr: ToastrService ) { }
 
   ngOnInit(): void {
-    this.getUsers();
+    setTimeout(() => {
+      this.getUsers();
+      this.isLoading = false;
+    }, 3000);
+
   }
+
 
   getUsers() {
     this.userService.getusers().subscribe((resp: any) => {
+      this.isLoading = true;
       this.users = resp;
+      this.isLoading = false;
     });
   }
 

@@ -7,6 +7,9 @@ import { UsersRoutingModule } from './users-routing.module';
 // components
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UsersFormComponent } from './components/users-form/users-form.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
+// skeleton-loader
 
 
 
@@ -15,7 +18,8 @@ import { UsersFormComponent } from './components/users-form/users-form.component
   imports: [
     CommonModule,
     UsersRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSkeletonLoaderModule.forRoot({ animation: 'pulse', loadingText: 'This item is actually loading...' }),
   ]
 })
 export class UsersModule { }

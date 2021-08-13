@@ -7,6 +7,11 @@
             <th>Acciones</th>
         </tr>
     </thead>
+
+    <div *ngIf="users.length === 0 && isLoading" class="item mt-5 text-center">
+        <ngx-skeleton-loader count="5" appearance="circle"></ngx-skeleton-loader>
+    </div>
+
     <tbody *ngIf="users.length > 0">
         <tr class="text-center" *ngFor="let u of users">
             <td>{{ u.name }}</td>
@@ -19,7 +24,7 @@
         </tr>
     </tbody>
 </table>
-<h5 class="mt-5 text-center" *ngIf="users.length === 0">No se encontraron datos para mostrar</h5>
+<h5 class="mt-5 text-center" *ngIf="users.length === 0 && !isLoading">No se encontraron datos para mostrar</h5>
 <br><br>
 <hr>
 <app-users-form [userForEdit]="userForEdit" (fillTable)="receibeData($event)"></app-users-form>
